@@ -1,0 +1,22 @@
+{% extends 'polls/base1.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+
+              <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Update <span class="blue_light">offer</span></h2>
+                      <p>If you do not want to change a specific parameter of the offer, you can leave the field blank</p>
+                      <p>If you want to edit the payment details, please delete this offer and add a new offer.</p>
+
+                  </div>
+               </div>
+               </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Update offer</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,23 @@
+{% extends 'polls/base1.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+              <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Welcome <span class="blue_light"> back!</span></h2>
+                  </div>
+               </div>
+               </div>
+<form action="" method="POST">
+    {% csrf_token %}
+    {% for field in form %}
+        <p>{{ field.label }}: <br> {{ field }}</p>
+    {% endfor %}
+    <br></br>
+    <button type="submit" class="btn btn-primary">Login</button>
+</form>
+</br>
+<p>Don't have an account? <a href="{% url 'register' %}" style="color: purple;"> Signup here</a></p>
+{% endblock %}

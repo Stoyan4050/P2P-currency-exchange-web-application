@@ -1,0 +1,21 @@
+{% extends 'polls/base1.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+              <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Register <span class="blue_light"> now!</span></h2>
+                  </div>
+               </div>
+               </div>
+<form action="" method="POST" >
+    {% csrf_token %}
+    {{ form | crispy }}
+    <br></br>
+
+    <button type="submit" class="btn btn-primary ">Update user info</button> <a href="{% url 'change_password' %}" style="color: purple; font-size: large;  margin-left: 20px;">Change password</a>
+
+</form>
+{% endblock %}

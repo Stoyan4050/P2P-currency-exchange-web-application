@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" type="text/css" href="../../../static/css/log_in.css">
+</head>
+<body>
+    <div class="container">
+        <div class="screen">
+            <div class="screen__content">
+                <form class="login">
+                    <button class="back_button" onclick="location.href='{% url 'index1' %}'" type="button">
+                    <i class="arrow left"></i>
+                    <span class="back_button_text">Back</span>
+                    </button>
+                    <div class="title"><h2> Welcome back!</h2>
+                    </div>
+
+                    <div class="login__field">
+                        <i class="login__icon fas fa-user"></i>
+                        <input type="text" class="login__input" placeholder="User name / Email">
+                    </div>
+                    <div class="login__field">
+                        <i class="login__icon fas fa-lock"></i>
+                        <input type="password" class="login__input" placeholder="Password">
+                    </div>
+                    <!-- onclick="location.href='about.html'" type="button"-->
+                    <button class="button login__submit" onclick="location.href='{% url 'about' %}'" type="button">
+                        <span class="button__text">Log In Now</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+                </form>
+                <div class="social-login">
+                    <button class="button login__submit" onclick="location.href='{% url 'register' %}'" type="button">
+                        <span class="button__text" >Register</span>
+                        <i class="button__icon fas fa-chevron-right"></i>
+                    </button>
+
+                </div>
+            </div>
+            <div class="screen__background">
+                <span class="screen__background__shape screen__background__shape4"></span>
+                <span class="screen__background__shape screen__background__shape3"></span>
+                <span class="screen__background__shape screen__background__shape2"></span>
+                <span class="screen__background__shape screen__background__shape1"></span>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

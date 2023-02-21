@@ -1,0 +1,76 @@
+{% extends 'polls/base1.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block content %}
+<!--   <h1>Renew: </h1> -->
+<!--   <p>Borrower:</p> -->
+<!--   <p{% if book_instance.is_overdue %} class="text-danger"{% endif %}>Due date: </p> -->
+
+<!--   <form action="" method="post"> -->
+<!--     {% csrf_token %} -->
+<!--     <table> -->
+<!--     {{ form.as_table }} -->
+<!--     </table> -->
+<!--     <input type="submit" value="Submit"> -->
+<!--   </form> -->
+              <div class="row">
+               <div class="col-md-12">
+                  <div class="titlepage text_align_center">
+                     <h2>Create new <span class="blue_light">offer</span></h2>
+                  </div>
+               </div>
+               </div>
+  <form method="post">
+    {% csrf_token %}
+    {{ form|crispy }}
+    <button type="submit" class="btn btn-primary">Add offer</button>
+  </form>
+{% endblock %}
+
+<!-- <form> -->
+<!--   <div class="form-row"> -->
+<!--     <div class="form-group col-md-6"> -->
+<!--       <label for="inputEmail4">Email</label> -->
+<!--       <input type="email" class="form-control" id="inputEmail4" placeholder="Email"> -->
+<!--     </div> -->
+<!--     <div class="form-group col-md-6"> -->
+<!--       <label for="inputPassword4">Password</label> -->
+<!--       <input type="password" class="form-control" id="inputPassword4" placeholder="Password"> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="form-group"> -->
+<!--     <label for="inputAddress">Address</label> -->
+<!--     <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St"> -->
+<!--   </div> -->
+<!--   <div class="form-group"> -->
+<!--     <label for="inputAddress2">Address 2</label> -->
+<!--     <input type="text" class="form-control" id="inputAddress2" placeholder="Apartment, studio, or floor"> -->
+<!--   </div> -->
+<!--   <div class="form-row"> -->
+<!--     <div class="form-group col-md-6"> -->
+<!--       <label for="inputCity">City</label> -->
+<!--       <input type="text" class="form-control" id="inputCity"> -->
+<!--     </div> -->
+<!--     <div class="form-group col-md-4"> -->
+<!--       <label for="inputState">State</label> -->
+<!--       <select id="inputState" class="form-control"> -->
+<!--         <option selected>Choose...</option> -->
+<!--         <option>...</option> -->
+<!--       </select> -->
+<!--     </div> -->
+<!--     <div class="form-group col-md-2"> -->
+<!--       <label for="inputZip">Zip</label> -->
+<!--       <input type="text" class="form-control" id="inputZip"> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <div class="form-group"> -->
+<!--     <div class="form-check"> -->
+<!--       <input class="form-check-input" type="checkbox" id="gridCheck"> -->
+<!--       <label class="form-check-label" for="gridCheck"> -->
+<!--         Check me out -->
+<!--       </label> -->
+<!--     </div> -->
+<!--   </div> -->
+<!--   <button type="submit" class="btn btn-primary">Sign in</button> -->
+<!-- </form> -->
